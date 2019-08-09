@@ -1,0 +1,43 @@
+.menu{
+    float:right;
+}
+
+.link{
+    display: inline-block;
+    height: auto;
+    margin: 0 5px;
+    padding: .55em 2em;
+    background: #fff;
+    border-left:2px solid #fff;
+    border-right:2px solid #fff;
+    font-family: Ubuntu,sans-serif;
+    font-weight: 400;
+    color: #282828;
+    transition: all 150ms ease;
+    text-decoration: none;
+    line-height: 1.42857;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 0;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    font-size: 1.0rem;
+    /* margin-right:4px; */
+    margin-top: 3px;
+  } 
+  .link:hover{
+    /* background: #282828; */
+    /* border-color:  #282828; */
+    border-left:2px solid #ba0c2f;
+    border-right:2px solid #ba0c2f;
+    color:#ba0c2f;
+    border-radius:4px 4px 4px 4px;
+    /* padding: 8.8px 28px; */
+  }
+
+  /* .active{
+    background: #0056b8;
+    border-color:  #0056b8;
+    color:#fff;
+  } */

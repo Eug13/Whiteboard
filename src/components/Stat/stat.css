@@ -1,0 +1,34 @@
+.stat{
+    /* margin:0 auto; */
+    margin:0 10px;
+}
+
+.page_link{
+    display: inline-block;
+    padding:10px 20px;
+    border-left:2px solid #0056b8;
+    border-right:2px solid #0056b8;
+    border-radius:4px 4px 4px 4px;
+    color:#0056b8;
+    margin:20px;
+    font-family: Ubuntu,sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.page_link:first-child{
+    margin-left:0;
+}
+.page_link:hover{
+    background: #0056b8;
+    color:#fff;
+    cursor:pointer;
+}
+
+.act{
+    background: #0056b8;
+    color:#fff;
+    cursor:pointer;
+}
+
