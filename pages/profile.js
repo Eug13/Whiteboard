@@ -29,7 +29,8 @@ const Profile = (props) => (
         padding:10px;
     }
       .row {
-       width:400px;
+        width:300px;
+
       }
     `}</style>
   </div>

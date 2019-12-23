@@ -8,7 +8,7 @@ const Logo = ( props ) => (
         display: inline-block;
         height: auto;
         margin: 0;
-        padding: .25em 1em .25em 1em;
+        padding: .85em 1em .25em 1em;
         background: #fff;
         border-color: #fff;
         font-family: Ubuntu,sans-serif;
@@ -25,7 +25,7 @@ const Logo = ( props ) => (
         border-radius: 0;
         white-space: nowrap;
         letter-spacing: 1px;
-        font-size: 1.5rem;
+        font-size: 1.0rem;
     }
     
     .whiteboard:hover{

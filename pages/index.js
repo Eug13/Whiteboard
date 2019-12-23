@@ -4,6 +4,7 @@ import Wod from '../pages/Wod'
 import Profile from '../pages/Profile'
 import Nav from '../components/nav'
 import Stat from '../components/Stat'
+import Burger from '../components/Burger'
 
 const Home = () => (
   <div>
@@ -29,6 +30,7 @@ const Home = () => (
         margin: 5px auto 40px;
         display: flex;
         flex-direction: row;
+        flex-wrap:wrap;
         justify-content: space-between;
         border-top:1px solid #ddd;
       }

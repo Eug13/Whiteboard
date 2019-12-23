@@ -5,6 +5,7 @@ const Table = ( props ) => (
         <table>
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>#</th>
                     <th>Name</th>
                     <th>Standart</th>
@@ -17,6 +18,7 @@ const Table = ( props ) => (
             <tbody>
                 { props.athletes.map( ( item, index ) =>
                     ( <tr key={ index }>
+                        <td className="image-container"><img src={item.photo} alt="" width='50' height='50' /></td>
                         <td>{ index + 1 }</td>
                         <td>{ item.name } { item.surname }</td>
                         <td>true</td>
@@ -76,6 +78,14 @@ tr:hover{
     color:#ba0c2f;
     cursor:pointer;
     background: #fffecf;
+}
+
+.image-container img {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-radius: 50%;
+    transition: border-color 150ms ease;
 }
 `}</style>
     </div>

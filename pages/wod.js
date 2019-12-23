@@ -8,10 +8,10 @@ class Wod extends React.Component{
         wod:null
     }
     componentDidMount(){
-        const data = fetchCircuits();
-        data.then(res => {
-            this.setState({wod:res})
-        })
+        // const data = fetchCircuits();
+        // data.then(res => {
+        //     this.setState({wod:res})
+        // })
     }
     render(){
         const wod = this.state.wod;

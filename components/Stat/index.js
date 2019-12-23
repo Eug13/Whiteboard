@@ -5,19 +5,19 @@ import Top from "./Top";
 
 const pages = [ "Boys", "Girls", "'RXD", "SCALED" ];
 const athletes = [
-    { name: "Evgeniy", surname: "Derzhavin", isStandart: true, weight: 45, reps: 12, time: 12 },
-    { name: "Patrik", surname: "Wellner", isStandart: true, weight: 65, reps: 12, time: 12 },
-    { name: "Brent", surname: "Fikowski", isStandart: true, weight: 75, reps: 12, time: 12 },
-    { name: "Scott", surname: "Panchik", isStandart: true, weight: 45, reps: 12, time: 12 },
-    { name: "Dan", surname: "Baley", isStandart: true, weight: 45, reps: 12, time: 12 },
-    { name: "Evgeniy", surname: "Derzhavin", isStandart: true, weight: 45, reps: 12, time: 12 },
-    { name: "Patrik", surname: "Wellner", isStandart: true, weight: 65, reps: 12, time: 12 },
-    { name: "Brent", surname: "Fikowski", isStandart: true, weight: 75, reps: 12, time: 12 },
-    { name: "Scott", surname: "Panchik", isStandart: true, weight: 45, reps: 12, time: 12 },
-    { name: "Dan", surname: "Baley", isStandart: true, weight: 45, reps: 12, time: 12 },
-    { name: "Evgeniy", surname: "Derzhavin", isStandart: true, weight: 45, reps: 12, time: 12 },
-    { name: "Patrik", surname: "Wellner", isStandart: true, weight: 65, reps: 12, time: 12 },
-    { name: "Brent", surname: "Fikowski", isStandart: true, weight: 75, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Evgeniy", surname: "Derzhavin", isStandart: true, weight: 45, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Patrik", surname: "Wellner", isStandart: true, weight: 65, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Brent", surname: "Fikowski", isStandart: true, weight: 75, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Scott", surname: "Panchik", isStandart: true, weight: 45, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Dan", surname: "Baley", isStandart: true, weight: 45, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Evgeniy", surname: "Derzhavin", isStandart: true, weight: 45, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Patrik", surname: "Wellner", isStandart: true, weight: 65, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Brent", surname: "Fikowski", isStandart: true, weight: 75, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Scott", surname: "Panchik", isStandart: true, weight: 45, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Dan", surname: "Baley", isStandart: true, weight: 45, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Evgeniy", surname: "Derzhavin", isStandart: true, weight: 45, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Patrik", surname: "Wellner", isStandart: true, weight: 65, reps: 12, time: 12 },
+    { photo:"https://games-assets.crossfit.com/styles/featured_athlete/s3/featured_athlete/athleteheadshot_fraser.jpg?itok=_hs0DUCv",name: "Brent", surname: "Fikowski", isStandart: true, weight: 75, reps: 12, time: 12 },
 ];
 
 class Stat extends React.Component {
@@ -32,7 +32,7 @@ class Stat extends React.Component {
     render() {
         return (
             <div>
-                <Top />
+                {/* <Top /> */}
                 <div className="stat">
                     <span className="page_link act">Leaderboard</span>
                     { pages.map( ( item, index ) =>
@@ -45,7 +45,6 @@ class Stat extends React.Component {
                 </div>
                 <style jsx>{`
                     .stat{
-                        /* margin:0 auto; */
                         margin:0 10px;
                     }
                     
