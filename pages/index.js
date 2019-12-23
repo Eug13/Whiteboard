@@ -15,9 +15,15 @@ const Home = () => (
     <Nav />
     <div className='container'>
       <div className='row'>
-       <Wod small />
-       <Stat />
-       <Profile small />
+        <div className='box1'>
+         <Wod small />
+        </div>
+        <div className='box2'>
+         <Stat />
+        </div>
+        <div className='box3'>
+          <Profile small />
+        </div>
       </div>
     </div>
 
@@ -34,6 +40,9 @@ const Home = () => (
         justify-content: space-between;
         border-top:1px solid #ddd;
       }
+      .box1 { order: 2; }
+      .box2 { order: 1; }
+      .box3 { order: 3; }
     `}</style>
   </div>
 )
