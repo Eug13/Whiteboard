@@ -1,8 +1,9 @@
 import React from "react";
 
-const Table = ( props ) => (
+const Cards = ( props ) => (
     <div className="table" >
-        <table>
+    hello cards
+        {/* <table>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -29,7 +30,7 @@ const Table = ( props ) => (
                     </tr> ) )
                 }
             </tbody>
-        </table>
+        </table> */}
         <style jsx>{`
 
 .table{
@@ -45,7 +46,7 @@ const Table = ( props ) => (
 th{
     background: #0056b8;
     color:white;
-    padding:10px 20px;
+    padding:10px 40px;
 }
 th:first-child{
     border-radius:4px 0 0 0 ;
@@ -67,7 +68,7 @@ tr:last-child td:last-child{
 }
 
 td{
-    padding:10px 20px;
+    padding:10px 10px;
 }
 
 tr:nth-child(odd){
@@ -91,4 +92,4 @@ tr:hover{
     </div>
 );
 
-export default Table;
+export default Cards;

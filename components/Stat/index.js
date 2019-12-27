@@ -1,6 +1,7 @@
 import React from "react";
 import Pages from "./Pages";
 import Table from "./Table";
+import Cards from "./Cards";
 import Top from "./Top";
 
 const pages = [ "Boys", "Girls", "'RXD", "SCALED" ];
@@ -21,7 +22,7 @@ const athletes = [
 ];
 
 class Stat extends React.Component {
-    constructor() {
+    constructor(props) {
         super();
         this.handleClick = this.handleClick.bind( this );
     }
@@ -30,40 +31,59 @@ class Stat extends React.Component {
     }
 
     render() {
+        const { screen, box } = this.props;
+       
         return (
             <div>
                 {/* <Top /> */}
-                <div className="stat">
-                    <span className="page_link act">Leaderboard</span>
+                <div className={( screen < 572 ? `stat` :`stat1`)}>
+                    <span className={( screen<= 572 ? `${box} act` :`${box} act1`)} >Leaderboard</span>
                     { pages.map( ( item, index ) =>
-                        ( <div className="page_link"  key= { index }>
+                        ( <div className={`${box}`}  key= { index }>
                             <Pages page={ item } onClick={ this.handleClick } />
-
                         </div> ) )
                     }
-                    <Table athletes={ athletes } />
+                    { screen <= 576 ?
+                        <Cards athletes={ athletes } />
+                      : <Table athletes={ athletes } />
+                    }
                 </div>
                 <style jsx>{`
                     .stat{
-                        margin:0 10px;
+                        flex-wrap:wrap;
+                        text-align:center;
+                    }
+
+                    .stat1{
+                        flex-wrap:wrap;
                     }
                     
-                    .page_link{
+                    .boxw{
                         display: inline-block;
-                        padding:10px 20px;
-                        border-left:2px solid #0056b8;
-                        border-right:2px solid #0056b8;
+                        margin:10px;
+                        background-color:white;
                         border-radius:4px 4px 4px 4px;
-                        color:#0056b8;
-                        margin:20px;
+                        box-shadow: 0px 0px 5px 1px #99999966;
+                        padding:20px;
+                        color:black;
                         font-family: Ubuntu,sans-serif;
                         text-transform: uppercase;
-                        font-size: 1.2rem;
-                        text-align: center;
+                    }
+
+                    .box{
+                        display: inline-block;
+                        margin:12px;
+                        background-color:white;
+                        border-radius:4px 4px 4px 4px;
+                        box-shadow: 0px 0px 5px 1px #99999966;
+                        padding:10px;
+                        color:black;
+                        font-family: Ubuntu,sans-serif;
+                        text-transform: uppercase;
                     }
                     
                     .page_link:first-child{
-                        margin-left:0;
+                       
                     }
                     .page_link:hover{
                         background: #0056b8;
@@ -72,6 +92,12 @@ class Stat extends React.Component {
                     }
                     
                     .act{
+                        background: #0056b8;
+                        color:#fff;
+                        cursor:pointer;
+                        width:89%;
+                    }
+                    .act1{
                         background: #0056b8;
                         color:#fff;
                         cursor:pointer;

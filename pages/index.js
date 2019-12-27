@@ -15,7 +15,6 @@ class Home extends React.Component{
 
   componentDidMount(){
     if(window){
-      console.log('width',window.innerWidth)
       let box = 'boxw';
       window.innerWidth <= 576 ? box = 'box' : box = 'boxw';
       this.setState({
@@ -37,18 +36,21 @@ return(
         <div className={`${this.state.boxOrder}1`}>
          <Wod 
             small 
-            screen = {this.state.screenWidth} 
+            screen = {this.state.screenWidth}
+            box = {this.state.boxOrder}
          />
         </div>
         <div className={`${this.state.boxOrder}2`}>
          <Stat 
             screen = {this.state.screenWidth} 
+            box = {this.state.boxOrder}
          />
         </div>
         <div className={`${this.state.boxOrder}3`}>
           <Profile 
             small 
             screen = {this.state.screenWidth} 
+            box = {this.state.boxOrder}
           />
         </div>
       </div>
@@ -65,11 +67,10 @@ return(
         flex-direction: row;
         flex-wrap:wrap;
         justify-content: space-between;
-        border-top:1px solid #ddd;
       }
 
-      .box1 { order: 3; }
-      .box2 { order: 2; }
+      .box1 { order: 2; }
+      .box2 { order: 3; }
       .box3 { order: 1; }
 
       .boxw1 { order: 1; }

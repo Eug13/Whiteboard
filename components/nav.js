@@ -22,7 +22,7 @@ const Nav = ( ) => {
 return (
   <nav>
     <ul>
-    <Logo name="redline cft rivne"/>
+    <Logo name="redline"/>
       <Burger open={open} setOpen={setOpen}/>
     </ul>
     { open ? <div className='mobileMenu'>

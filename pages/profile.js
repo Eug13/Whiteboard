@@ -9,7 +9,7 @@ const Profile = (props) => (
         <link rel='icon' href='/favicon.ico' />
         </Head>
     {props.small ? 
-    <div className={( props.screen <= 576 ? 'row1' : 'row')}>
+    <div className={props.box}>
         <div className='card'>
             <h1>Hello profile there!</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
@@ -21,6 +21,7 @@ const Profile = (props) => (
             <div className='row'>
                 <h1>Hello profile!</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
             </div>
    </div>
     }
@@ -32,10 +33,10 @@ const Profile = (props) => (
         color:#333333;
         padding:10px;
     }
-      .row {
-        width:300px;
+      .boxw {
+        width:450px;
       }
-      .row1 {
+      .box {
         width:100%;
       }
       .card{
