@@ -30,7 +30,7 @@ const Burger = ({ open, setOpen }) => {
           span {
             width: 2rem;
             height: 2px;
-            background:#0D0C1D; 
+            background: rgba(255,255,255,.5); 
             border-radius: 10px;
             transition: all 0.3s linear;
             position: relative;
@@ -51,15 +51,18 @@ const Burger = ({ open, setOpen }) => {
 
             .trans1 {
               transform: rotate(45deg);
+              background:#ba0c2f;
             }
         
             .trans2 {
               opacity: 0;
               transform: translateX(20px);
+              background:#ba0c2f;
             }
         
             .trans3 {
               transform: rotate(-45deg);
+              background:#ba0c2f;
             }
         `}</style>
       </div>

@@ -21,8 +21,8 @@ const Nav = ( ) => {
 
 return (
   <nav>
-    <ul className={( open ? 'shadow' : '' )}>
-    <Logo name="whiteboard crossfit rivne"/>
+    <ul>
+    <Logo name="redline cft rivne"/>
       <Burger open={open} setOpen={setOpen}/>
     </ul>
     { open ? <div className='mobileMenu'>
@@ -40,6 +40,7 @@ return (
       }
       nav {
         text-align: center;
+        background-color: #212529;
       }
       ul {
         display: flex;
@@ -48,7 +49,7 @@ return (
         margin:0;
       }
       nav > ul {
-        padding: 0 16px;
+        padding: 0 16px 7px 0;
       }
       li {
         display: flex;
@@ -57,7 +58,7 @@ return (
       a {
         margin: 0 5px;
         padding: .55em 2em;
-        color: #282828;
+        color: rgba(255,255,255,.5);
         text-decoration: none;
         font-weight: 400;
         font-size: 1.0rem;
@@ -72,13 +73,8 @@ return (
         border-radius:4px 4px 4px 4px;
       }
 
-      .shadow{
-        border-bottom:1px solid #dddddd;
-        padding-bottom:10px;
-        height:47px;
-      }
       .mobileMenu{
-        margin-top: 10px;
+        border-top:1px solid rgba(255,255,255,.5);
         padding: 10px 0;
         z-index:1;
       }

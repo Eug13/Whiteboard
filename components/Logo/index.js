@@ -9,10 +9,10 @@ const Logo = ( props ) => (
         height: auto;
         margin: 0;
         padding: .85em 1em .25em 1em;
-        background: #fff;
+        background: #212529;
         border-color: #fff;
         font-family: Ubuntu,sans-serif;
-        font-weight: 100;
+        font-weight: 400;
         color: #ba0c2f;
         transition: all 150ms ease;
         text-decoration: none;
