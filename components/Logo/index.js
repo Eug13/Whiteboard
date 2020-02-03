@@ -57,7 +57,6 @@ const Logo = ( props ) => (
       .whiteboard{
         display: inline-block;
         height: auto;
-        width: 56%;
         margin: 0;
         padding: .85em 0em 0.25em 0em;
         background: transparent;
@@ -89,9 +88,8 @@ const Logo = ( props ) => (
       display: inline-block;
       font-size: 12px;
       text-align: center;
-      width: 100%;
       position: relative;
-      top: -4px;
+      top: -5px;
     }
     `}</style>
     </span>
