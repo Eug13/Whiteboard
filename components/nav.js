@@ -49,7 +49,7 @@ return (
       }
 
       nav > ul {
-        padding: 0 16px 7px 0;
+        padding: 0 16px 0 0;
       }
       li {
         display: flex;
