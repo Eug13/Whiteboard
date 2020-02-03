@@ -51,6 +51,7 @@ const Logo = ( props ) => (
  </g>
 
 </svg>
+<span>{props.gym ? props.gym : ''}</span>
     
     <style jsx>{`
       .whiteboard{

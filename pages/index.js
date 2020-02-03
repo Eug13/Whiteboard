@@ -11,7 +11,8 @@ class Home extends React.Component{
   state = {
     screenWidth:null,
     boxOrder:'box',
-    lang:'ua'
+    lang:'ua',
+    gym:null
   }
    
    txt = require(`../components/Dict/${this.state.lang}/${this.state.lang}.json`);
@@ -30,6 +31,13 @@ class Home extends React.Component{
    console.log('login is handled!')
   }
 
+  handleGYM=(g)=>{
+    this.setState({
+      gym:g
+    });
+console.log('gym ', g);
+  }
+
 render(){
 return(
   <div>
@@ -37,7 +45,7 @@ return(
       <title>REDLINE</title>
       <link rel='icon' href='/favicon.ico' />
     </Head>
-    <Nav txt = {this.txt}/>
+    <Nav txt = {this.txt} gym={this.state.gym}/>
     <div className='container'>
       <div className='row'>
         <div className={`${this.state.boxOrder}1`}>
@@ -60,6 +68,7 @@ return(
             box = {this.state.boxOrder}
             login = {this.handleLogin.bind(this)}
             txt = {this.txt}
+            handleGYM = {this.handleGYM}
           />
         </div>
       </div>

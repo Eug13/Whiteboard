@@ -5,40 +5,50 @@ import Login from '../components/login'
 
 const today = new Date().toLocaleDateString().split('/');
 
-const Profile = (props) => (
-  <div className='profile'>
-      <Head>
-        <title>Home</title>
-        <link rel='icon' href='/favicon.ico' />
+class Profile extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleGYMcheck = (e) => {
+    this.props.handleGYM(e.target.innerText.toLowerCase());
+    console.log(e.target.innerText.toLowerCase());
+  }
+  render() {
+    return (
+      <div className='profile'>
+        <Head>
+          <title>Home</title>
+          <link rel='icon' href='/favicon.ico' />
         </Head>
-    {props.small ? 
-    <div className={props.box}>
-        <div className='card'>
-            <h1>{props.txt.login}</h1>
-            <p>
-              <span className='date'><b>{today[0]}/{today[1]}</b><br/><b>{today[2]}</b></span><br/>
-              Lorem Ipsum is simply dummy text of the printing. </p>
+        {this.props.small ?
+          <div className={this.props.box}>
+            <div className='card'>
+              <h1>{this.props.txt.login}</h1>
+              <p>
+                <span className='date'><b>{today[0]}/{today[1]}</b><br /><b>{today[2]}</b></span><br />
+                {this.props.txt.login_msg}</p>
               <div className='card_menu'>
-                <span className='card logo_btn'>CrossFit Rivne</span>
-                <span className='card logo_btn'>ZAWOD</span>
+                <span className='card logo_btn' onClick={(e) => this.handleGYMcheck(e)}>CrossFit Rivne</span>
+                <span className='card logo_btn' onClick={(e) => this.handleGYMcheck(e)}>ZAWOD</span>
               </div>
-           <br/>
-           <Login login={props.login}  txt={props.txt}/>
-        </div>
-    </div>
-    :
-    <div>
-        <Nav/>
+              <br />
+              <Login login={this.props.login} txt={this.props.txt} />
+            </div>
+          </div>
+          :
+          <div>
+            <Nav />
             <div className='row'>
-            <h1>Hello profile there!</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-           <br/>
-           <Login txt={props.txt}/>
+              <h1>Hello profile there!</h1>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+              <br />
+              <Login txt={props.txt} />
 
             </div>
-   </div>
-    }
-    <style jsx>{`
+          </div>
+        }
+        <style jsx>{`
     h1{
         margin:0;
         text-transform:uppercase;
@@ -81,8 +91,14 @@ const Profile = (props) => (
       .logo_btn{
         width:34%;
       }
+      .logo_btn:hover{
+        cursor:pointer;
+        background-color:#ba0c2f;
+        color:white;
+      }
     `}</style>
-  </div>
-)
-
+      </div>
+    );
+  }
+}
 export default Profile

@@ -18,7 +18,7 @@ const Nav = (props) => {
 return (
   <nav>
     <ul className={open ? 'open':''}>
-    <Logo name="redline"/>
+    <Logo name="redline" gym={props.gym}/>
       <Burger open={open} setOpen={setOpen}/>
     </ul>
     { open ? <div className='mobileMenu'>
