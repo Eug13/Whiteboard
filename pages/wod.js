@@ -40,12 +40,12 @@ class Wod extends React.Component{
               </div>
           </div>
           :
-          <div>
+          <>
               <Nav/>
                   <div className='row1'>
                       <h1>Hello wod!</h1>
                   </div>
-         </div>
+         </>
           }
           <style jsx>{`
           .wod{

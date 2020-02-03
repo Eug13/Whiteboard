@@ -7,10 +7,11 @@ const nextApp = next({ dev })
 const handle = nextApp.getRequestHandler() //part of next config
 const mongoose = require('mongoose')
 
-const db = mongoose.connect('mongodb://localhost:27017/Uthopia',{ useNewUrlParser: true,useUnifiedTopology: true })
+const db = mongoose.connect('mongodb://localhost:27017/Uthopia',{ useNewUrlParser: true, useUnifiedTopology: true })
 
 nextApp.prepare().then(() => {
     const app = express()
+    app.use('/img', express.static(__dirname + '/img'));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use('/api/u', require('./routes/index')) 

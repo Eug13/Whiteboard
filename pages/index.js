@@ -10,9 +10,11 @@ class Home extends React.Component{
 
   state = {
     screenWidth:null,
-    boxOrder:'boxw'
+    boxOrder:'box',
+    lang:'ua'
   }
-
+   
+   txt = require(`../components/Dict/${this.state.lang}/${this.state.lang}.json`);
   componentDidMount(){
     if(window){
       let box = 'boxw';
@@ -32,10 +34,10 @@ render(){
 return(
   <div>
     <Head>
-      <title>Home</title>
+      <title>REDLINE</title>
       <link rel='icon' href='/favicon.ico' />
     </Head>
-    <Nav />
+    <Nav txt = {this.txt}/>
     <div className='container'>
       <div className='row'>
         <div className={`${this.state.boxOrder}1`}>
@@ -57,6 +59,7 @@ return(
             screen = {this.state.screenWidth} 
             box = {this.state.boxOrder}
             login = {this.handleLogin.bind(this)}
+            txt = {this.txt}
           />
         </div>
       </div>

@@ -10,7 +10,6 @@ const Burger = ({ open, setOpen }) => {
         div{
           position: relative;
           top: 8px;
-          right: 10px;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
@@ -26,11 +25,14 @@ const Burger = ({ open, setOpen }) => {
           div:focus {
             outline: none;
           }
+          div:hover{
+            cursor:pointer;
+          }
         
           span {
             width: 2rem;
             height: 2px;
-            background: rgba(255,255,255,.5); 
+            background: #ba0c2f; 
             border-radius: 10px;
             transition: all 0.3s linear;
             position: relative;

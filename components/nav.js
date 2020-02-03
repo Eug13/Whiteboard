@@ -3,25 +3,21 @@ import Link from 'next/link'
 import Logo from '../components/Logo'
 import Burger from '../components/Burger'
 
-
-const links = [
-  { href: '/', label: 'Home' },
-  { href: '/wod', label: 'Wod' },
-  // { href: '/about', label: 'About' },
-  { href: '/profile', label: 'Profile' },
-  { href: '/login', label: 'Login' }
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
-
-
-const Nav = ( ) => {
+const Nav = (props) => {
+  const links = [
+    { href: '/', label: 'Home' },
+    { href: '/wod', label: 'WOD' },
+    { href: '/profile', label: 'Profile' },
+    { href: '/login', label: 'Login' }
+  ].map(link => {
+    link.key = `nav-link-${link.href}-${link.label}`
+    return link
+  })
   const [open, setOpen] = React.useState(false);
 
 return (
   <nav>
-    <ul>
+    <ul className={open ? 'open':''}>
     <Logo name="redline"/>
       <Burger open={open} setOpen={setOpen}/>
     </ul>
@@ -40,7 +36,7 @@ return (
       }
       nav {
         text-align: center;
-        background-color: #212529;
+        background-color: #fff;
       }
       ul {
         display: flex;
@@ -48,17 +44,22 @@ return (
         justify-content: space-between;
         margin:0;
       }
+      .open{
+        box-shadow: 0px 0px 5px 1px #99999966;
+      }
+
       nav > ul {
         padding: 0 16px 7px 0;
       }
       li {
         display: flex;
-        padding: 6px 8px;
+        padding: 16px 8px;
+        border-bottom:1px solid #33333324;
       }
       a {
         margin: 0 5px;
         padding: .55em 2em;
-        color: rgba(255,255,255,.5);
+        color: #ba0c2f;
         text-decoration: none;
         font-weight: 400;
         font-size: 1.0rem;
@@ -69,7 +70,7 @@ return (
       a:hover{
         border-left:2px solid #ba0c2f;
         border-right:2px solid #ba0c2f;
-        color:#ba0c2f;
+        color:#fff;
         border-radius:4px 4px 4px 4px;
       }
 

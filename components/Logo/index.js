@@ -3,7 +3,7 @@ import React from "react";
 const Logo = ( props ) => (
     <span className="whiteboard"> 
     <span>{props.name}</span>
-    <img src='data:image/svg+xml;base64,CjxpbWcgc3R5bGU9IndpZHRoOiAxMDAlOyBoZWlnaHQ6IGF1dG87IGZsb2F0OiBsZWZ0O2JhY2tncm91bmQtaW1hZ2U6IG5vbmU7IiBzcmM9Ii8vY2RuLm9ubGluZXdlYmZvbnRzLmNvbS9zdmcvaW1nXzQ5MjY3Ni5wbmciIGFsdD0iRSBDIEciPgogIA==' width='16' height='16' />
+    <img src='../../img/icon.png' width='50' height='16' />
     
     <style jsx>{`
       .whiteboard{
@@ -11,10 +11,10 @@ const Logo = ( props ) => (
         height: auto;
         margin: 0;
         padding: .85em 1em .25em 1em;
-        background: #212529;
+        background: transparent;
         border-color: #fff;
         font-family: Ubuntu,sans-serif;
-        font-weight: 400;
+        font-weight: 600;
         color: #ba0c2f;
         transition: all 150ms ease;
         text-decoration: none;
