@@ -1,9 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import Wod from '../pages/Wod'
-import Profile from '../pages/Profile'
+import Profile from '../pages/profile'
 import Nav from '../components/nav'
-import Stat from '../components/Stat'
+import Stat from '../components/stat'
 import Burger from '../components/Burger'
 
 class Home extends React.Component{
@@ -23,6 +23,11 @@ class Home extends React.Component{
       });
     }
   }
+
+  handleLogin(){
+   console.log('login is handled!')
+  }
+
 render(){
 return(
   <div>
@@ -51,6 +56,7 @@ return(
             small 
             screen = {this.state.screenWidth} 
             box = {this.state.boxOrder}
+            login = {this.handleLogin.bind(this)}
           />
         </div>
       </div>
