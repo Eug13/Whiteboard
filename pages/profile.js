@@ -27,11 +27,13 @@ class Profile extends React.Component {
               <h1>{this.props.txt.login}</h1>
               <p>
                 <span className='date'><b>{today[0]}/{today[1]}</b><br /><b>{today[2]}</b></span><br />
-                {this.props.txt.login_msg}</p>
+                {!this.props.isChosen ?this.props.txt.login_msg : null}</p>
+            { !this.props.isChosen ?
               <div className='card_menu'>
                 <span className='card logo_btn' onClick={(e) => this.handleGYMcheck(e)}>CrossFit Rivne</span>
                 <span className='card logo_btn' onClick={(e) => this.handleGYMcheck(e)}>ZAWOD</span>
               </div>
+              : null}
               <br />
               <Login login={this.props.login} txt={this.props.txt} />
             </div>

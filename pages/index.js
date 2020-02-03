@@ -12,7 +12,8 @@ class Home extends React.Component{
     screenWidth:null,
     boxOrder:'box',
     lang:'ua',
-    gym:null
+    gym:null,
+    isChosen:false
   }
    
    txt = require(`../components/Dict/${this.state.lang}/${this.state.lang}.json`);
@@ -33,7 +34,8 @@ class Home extends React.Component{
 
   handleGYM=(g)=>{
     this.setState({
-      gym:g
+      gym:g,
+      isChosen:true
     });
 console.log('gym ', g);
   }
@@ -69,6 +71,7 @@ return(
             login = {this.handleLogin.bind(this)}
             txt = {this.txt}
             handleGYM = {this.handleGYM}
+            isChosen = {this.state.isChosen}
           />
         </div>
       </div>

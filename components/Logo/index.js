@@ -51,12 +51,13 @@ const Logo = ( props ) => (
  </g>
 
 </svg>
-<span>{props.gym ? props.gym : ''}</span>
+<span className='gym'>{props.gym ? props.gym : ''}</span>
     
     <style jsx>{`
       .whiteboard{
         display: inline-block;
         height: auto;
+        width: 56%;
         margin: 0;
         padding: .85em 0em 0.25em 0em;
         background: transparent;
@@ -83,6 +84,14 @@ const Logo = ( props ) => (
     }
     img{
       display:inline;
+    }
+    .gym{
+      display: inline-block;
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      position: relative;
+      top: -4px;
     }
     `}</style>
     </span>
