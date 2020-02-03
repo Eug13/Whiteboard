@@ -57,7 +57,7 @@ const Logo = ( props ) => (
         display: inline-block;
         height: auto;
         margin: 0;
-        padding: .85em 1em .25em 1em;
+        padding: .85em 0em 0.25em 0em;
         background: transparent;
         border-color: #fff;
         font-family: Ubuntu,sans-serif;
